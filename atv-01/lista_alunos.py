@@ -1,8 +1,9 @@
 # Faça um programa que leia os dados de N Alunos e Imprima a lista na tela.
-# Adicione a funcionalidade de Imprimir na tela a lista informando a quantidade de alunos na lista e salvar em arquivo TXT. 
+# Adicione a funcionalidade de Imprimir na tela a lista informando a quantidade de alunos na lista e salvar em arquivo TXT.
 # Adicione a funcionalidade de Salvar a Lista em arquivo CSV.
 
 from os import system, path
+
 
 def ler_aluno():
     nome = input("Digite o nome do aluno: ")
@@ -90,6 +91,7 @@ def main():
                 print("Aluno removido com sucesso.")
 
         elif opcao == "l":
+
             if not len(alunos) > 0:
                 print("Não há alunos na lista")
             else:
@@ -122,9 +124,6 @@ def main():
                 else:
                     salvar_csv(arquivo, alunos)
                     print("Arquivo salvo com sucesso.")
-
-        elif opcao == "l":
-            print("")
         elif opcao == "q":
             return
         else:
